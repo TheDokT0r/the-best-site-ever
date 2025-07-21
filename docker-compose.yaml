@@ -1,0 +1,9 @@
+services:
+  mogodick:
+    image: nginx:alpine-slim
+    container_name: mogodick
+    ports:
+      - 3004:80
+    volumes:
+      - ./public:/usr/share/nginx/html
+    restart: unless-stopped
